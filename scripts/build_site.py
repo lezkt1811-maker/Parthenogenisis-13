@@ -21,6 +21,13 @@ CHAPTERS = ROOT / "book" / "chapters"
 AUDIO = ROOT / "docs" / "audio"
 OUT = ROOT / "docs" / "index.html"
 
+# Repository documents shown after the chapters: (audio key, file, title).
+SECTIONS = [
+    ("readme", ROOT / "README.md", "README"),
+    ("plan", ROOT / "book" / "00-book-plan.md", "Book plan"),
+    ("building", ROOT / "book" / "BUILDING.md", "Build notes"),
+]
+
 # The title and subtitle shown on the site. Change them here.
 BOOK_TITLE = "Parthenogenisis 13"
 BOOK_SUBTITLE = "Chapters, read aloud"
@@ -54,10 +61,21 @@ def chapter_list():
         content = body[head.end():]
         chapters.append({
             "num": num,
+            "slug": "prologue" if num == "00" else f"ch{int(num)}",
             "title": title,
             "html": markdown.markdown(content, extensions=["tables", "nl2br"]),
             "audio": f"audio/{num}.mp3",
             "has_audio": (AUDIO / f"{num}.mp3").exists(),
+        })
+    for key, path, title in SECTIONS:
+        chapters.append({
+            "num": key,
+            "slug": key,
+            "title": title,
+            "html": markdown.markdown(book_body(path), extensions=["tables", "nl2br"]),
+            "audio": f"audio/{key}.mp3",
+            "has_audio": (AUDIO / f"{key}.mp3").exists(),
+            "section": True,
         })
     return chapters
 
@@ -87,6 +105,7 @@ PAGE = """<!doctype html>
   nav button { width:100%; text-align:left; background:none; border:1px solid transparent; color:var(--text);
                padding:8px 10px; border-radius:8px; font:inherit; cursor:pointer; }
   nav button:hover { border-color:var(--hot); }
+  nav li.group { color:var(--muted); font-size:.85rem; margin:1.2em 0 .2em; list-style:none; }
   nav button[aria-current="true"] { border-color:var(--neon); background:var(--panel); color:var(--neon); }
   main { padding:32px 24px 80px; max-width:760px; width:100%; }
   h2 { color:var(--neon); font-size:clamp(1.6rem,4vw,2.2rem); margin:0 0 .4em;
@@ -210,9 +229,8 @@ document.getElementById("fwd").addEventListener("click", () => {
 });
 
 function indexFromHash() {
-  const m = location.hash.match(/^#ch(\\d+)$/);
-  if (!m) return 0;
-  const i = chapters.findIndex(c => c.num === m[1].padStart(2, "0"));
+  const h = decodeURIComponent(location.hash.slice(1));
+  const i = chapters.findIndex(c => c.slug === h);
   return i < 0 ? 0 : i;
 }
 
@@ -235,7 +253,7 @@ function show(i, play) {
     player.load();
     player.hidden = true;
   }
-  history.replaceState(null, "", "#ch" + ch.num.replace(/^0/, ""));
+  history.replaceState(null, "", "#" + ch.slug);
   window.scrollTo({ top: 0, behavior: "smooth" });
   sidebar.classList.remove("open");
   menuToggle.setAttribute("aria-expanded", "false");
@@ -264,13 +282,16 @@ show(indexFromHash(), false);
 
 def main() -> None:
     chapters = chapter_list()
-    nav = "\n".join(
-        f'      <li><button type="button">{html.escape(c["title"])}</button></li>'
-        for c in chapters
-    )
+    nav_items = []
+    for i, c in enumerate(chapters):
+        if c.get("section") and not any(x.get("section") for x in chapters[:i]):
+            nav_items.append('      <li class="group">Reference</li>')
+        nav_items.append(f'      <li><button type="button">{html.escape(c["title"])}</button></li>')
+    nav = "\n".join(nav_items)
     data = ",".join(
         "{" + ",".join([
             f'num:"{c["num"]}"',
+            f'slug:"{c["slug"]}"',
             f'title:{_js(c["title"])}',
             f'html:{_js(c["html"])}',
             f'audio:"{c["audio"]}"',

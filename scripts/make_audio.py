@@ -18,6 +18,7 @@ Model files are downloaded on first run to ~/.cache/book-tts/.
 
 import re
 import subprocess
+import unicodedata
 import sys
 import tempfile
 import urllib.request
@@ -31,6 +32,16 @@ ROOT = Path(__file__).resolve().parent.parent
 CHAPTERS = ROOT / "book" / "chapters"
 OUT = ROOT / "docs" / "audio"
 CACHE = Path.home() / ".cache" / "book-tts"
+
+# Repository documents that are narrated alongside the chapters.
+SECTIONS = {
+    "readme": ROOT / "README.md",
+    "plan": ROOT / "book" / "00-book-plan.md",
+    "building": ROOT / "book" / "BUILDING.md",
+}
+
+# Emoji and symbols are removed from the spoken text; the voice cannot read them.
+EMOJI = re.compile("[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u200D]")
 
 MODEL_URL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx"
 VOICES_URL = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin"
@@ -68,6 +79,8 @@ def book_text(path: Path) -> str:
 
 
 def clean_inline(s: str) -> str:
+    s = EMOJI.sub("", s)
+    s = "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
     s = s.replace("—", ", ").replace("–", "-")
     s = re.sub(r"\*\*(.+?)\*\*", r"\1", s)
     s = re.sub(r"\*(.+?)\*", r"\1", s)
@@ -80,6 +93,8 @@ def segments(md: str):
     for block in re.split(r"\n\s*\n", md):
         block = block.strip()
         if not block:
+            continue
+        if block.startswith("```"):
             continue
         if block.startswith("#"):
             title = clean_inline(block.lstrip("#").strip())
@@ -152,14 +167,23 @@ def render(kokoro: Kokoro, md_path: Path, out_path: Path) -> None:
     print(f"wrote {out_path.relative_to(ROOT)} ({minutes:.1f} min)")
 
 
-def main() -> None:
-    only = sys.argv[1] if len(sys.argv) > 1 else None
-    kokoro = load_model()
+def sources():
     for md_path in sorted(CHAPTERS.glob("*.md")):
-        num = md_path.name[:2]
-        if only and num != only.zfill(2):
+        yield md_path.name[:2], md_path
+    for key, md_path in SECTIONS.items():
+        yield key, md_path
+
+
+def main() -> None:
+    # Pass a chapter number (03), or a section name (readme, plan, building). No argument: everything.
+    only = sys.argv[1] if len(sys.argv) > 1 else None
+    if only and only.isdigit():
+        only = only.zfill(2)
+    kokoro = load_model()
+    for key, md_path in sources():
+        if only and key != only:
             continue
-        render(kokoro, md_path, OUT / f"{num}.mp3")
+        render(kokoro, md_path, OUT / f"{key}.mp3")
 
 
 if __name__ == "__main__":
