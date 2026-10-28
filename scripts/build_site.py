@@ -40,7 +40,12 @@ def chapter_list():
         body = book_body(md_path)
         # The file opens with "CHAPTER <numeral>" and the title on the next line; the text follows.
         head = re.match(r"CHAPTER ([IVXLCDM]+)\n+(.+)\n+", body)
-        title = f"Chapter {head.group(1)}: {head.group(2).strip().title()}"
+        if head:
+            title = f"Chapter {head.group(1)}: {head.group(2).strip().title()}"
+        else:
+            # Some chapters open with the heading on one line: "Chapter XIII: Title".
+            head = re.match(r"Chapter ([IVXLCDM]+): (.+)\n+", body)
+            title = f"Chapter {head.group(1)}: {head.group(2).strip()}"
         content = body[head.end():]
         chapters.append({
             "num": num,
