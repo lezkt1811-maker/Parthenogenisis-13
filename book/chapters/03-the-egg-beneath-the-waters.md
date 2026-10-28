@@ -124,7 +124,7 @@ The Mother bowed her head.
 
 Let me learn how to nourish without commanding.
 
-Let me learn how to witness a beginning  
+Let me learn how to witness a beginning
 without demanding that it resemble me."
 
 The waters grew still.
@@ -157,7 +157,7 @@ Not a song that demanded the Egg awaken.
 
 A song of welcome.
 
-## The Song of the Held Possibility
+THE SONG OF THE HELD POSSIBILITY
 
 "Rest, little mystery, deep in the night.
 
@@ -177,7 +177,7 @@ The shell is your shelter.
 
 The silence, your sea.
 
-The future is waiting  
+The future is waiting
 for what you will be.
 
 Rest, little mystery, quiet and deep.
@@ -254,7 +254,7 @@ My power is not measured by how much I produce.
 
 My wisdom is not measured by how many beginnings I command.
 
-And my existence does not become less sacred  
+And my existence does not become less sacred
 when I choose to rest."
 
 The serpent lowered its head.
@@ -351,7 +351,7 @@ What is carried is not owned.
 
 What is nurtured is not possessed.
 
-And what emerges from a beginning  
+And what emerges from a beginning
 is permitted to become its own.
 
 The serpent lifted its head.
@@ -416,5 +416,5 @@ The creature had emerged.
 
 And the Mother had discovered that creation was not the act of keeping every possibility within a shell.
 
-It was the art of knowing when to protect a beginning,  
+It was the art of knowing when to protect a beginning,
 and when to let it enter the world.

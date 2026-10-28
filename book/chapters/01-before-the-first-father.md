@@ -2,8 +2,8 @@
 
 In the beginning, there was no beginning.
 
-There was no dawn to announce it.  
-No sun to witness it.  
+There was no dawn to announce it.
+No sun to witness it.
 No voice to proclaim that something had begun.
 
 There was only the Vastness.
@@ -82,8 +82,8 @@ Let what is possible discover its shape.
 
 Let what is hidden find a way to appear.
 
-Let there be something  
-that may look upon me  
+Let there be something
+that may look upon me
 and know that I am here."
 
 She expected no answer.
@@ -204,8 +204,8 @@ For life is not a statue.
 
 Life is a becoming.
 
-And what becomes  
-must be permitted  
+And what becomes
+must be permitted
 to become again."
 
 The waters deepened.
@@ -252,8 +252,8 @@ For the first law of the Undivided Mother was this:
 
 That which gives life does not lose its own.
 
-And that which is born  
-is not born merely  
+And that which is born
+is not born merely
 to remain as it was.
 
 Thus the first chapter came to its close.

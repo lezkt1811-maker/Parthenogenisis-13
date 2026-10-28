@@ -250,32 +250,32 @@ She did not command the currents to abandon their separate paths.
 
 Instead, she spoke a second teaching.
 
-## The Teaching of the Two Currents
+THE TEACHING OF THE TWO CURRENTS
 
-"Let there be difference  
+"Let there be difference
 without contempt.
 
-Let there be strength  
+Let there be strength
 without domination.
 
-Let there be wisdom  
+Let there be wisdom
 without the hunger to rule.
 
-Let there be creation  
+Let there be creation
 without ownership.
 
-Let there be freedom  
+Let there be freedom
 without the fear of another's freedom.
 
 For no single star contains the heavens.
 
 No single river contains the sea.
 
-No single voice can speak every truth  
+No single voice can speak every truth
 that the world is waiting to hear.
 
-And no living thing  
-should be required to disappear  
+And no living thing
+should be required to disappear
 so another may feel complete."
 
 The waters carried her words.
@@ -446,12 +446,12 @@ And the Mother had seen the shadow that could follow when difference was mistake
 
 For the fourth teaching of the Undivided was this:
 
-We need not become the same  
+We need not become the same
 to belong to the same universe.
 
 And somewhere in the depths, the serpent began to shed its skin once more.
 
 For the next mystery was already stirring.
 
-The mystery of what must be released  
+The mystery of what must be released
 so that what is hidden may finally be seen.

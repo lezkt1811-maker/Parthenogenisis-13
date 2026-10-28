@@ -162,27 +162,27 @@ The soil beneath the seed, holding a future that could not yet be seen.
 
 And so the Mother gave the unwritten its first teaching.
 
-## The Teaching of the Unwritten
+THE TEACHING OF THE UNWRITTEN
 
 "Do not hurry to name what has only begun.
 
-Do not call a seed a failure  
+Do not call a seed a failure
 because it has not yet become a tree.
 
-Do not call the darkness empty  
+Do not call the darkness empty
 because your eyes have not learned to see within it.
 
-Do not mistake the unfinished  
+Do not mistake the unfinished
 for the unworthy.
 
-There are things that must remain unknown  
+There are things that must remain unknown
 until they have gathered the strength to emerge.
 
 There are truths that cannot be forced into speech.
 
 There are beginnings that need no witness.
 
-And there are parts of the self  
+And there are parts of the self
 that belong to no one else's understanding.
 
 Guard these places.
@@ -311,14 +311,14 @@ And she spoke the second teaching of the Undivided.
 
 I am more than what I carry.
 
-I am more than what the world  
+I am more than what the world
 has learned to call me.
 
 Before I was needed, I existed.
 
 Before I was named, I was whole.
 
-And when every name has fallen silent,  
+And when every name has fallen silent,
 I will remain."
 
 The waters received her words.
@@ -329,7 +329,7 @@ And the unwritten held them safe.
 
 Not as a law to govern the universe.
 
-As a remembrance to be found  
+As a remembrance to be found
 whenever a living thing needed to begin again.
 
 Thus ended the second chapter.
@@ -346,10 +346,10 @@ Something waited beneath the surface.
 
 Something round and silent.
 
-Something that held within its fragile boundary  
+Something that held within its fragile boundary
 the possibility of a life not yet seen.
 
 The Egg Beneath the Waters.
 
-And the Mother was about to learn what it meant  
+And the Mother was about to learn what it meant
 for possibility to become a body.

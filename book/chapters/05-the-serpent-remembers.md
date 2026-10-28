@@ -282,7 +282,7 @@ You may learn from a teacher without declaring the teacher incapable of error.
 
 You may preserve a tradition without pretending that every part of it has always been just.
 
-And you may honor what came before you  
+And you may honor what came before you
 without being forbidden to discover what comes next."
 
 The creatures looked at one another.
@@ -463,18 +463,18 @@ It needed to remind the living that the past could guide them without becoming a
 
 And it needed to carry one final teaching from the Mother into every age.
 
-## The Serpent's Vow
+THE SERPENT'S VOW
 
-"I remember the skin,  
+"I remember the skin,
 but I am not the skin.
 
-I remember the darkness,  
+I remember the darkness,
 but I am not the night.
 
-I remember the wound,  
+I remember the wound,
 but I am not only the wound.
 
-I remember the name,  
+I remember the name,
 but I am more than the name.
 
 I remember what was spoken.
@@ -483,8 +483,8 @@ I remember what was silenced.
 
 I remember what survived.
 
-And I will not call a mystery solved  
-merely because I have found a story  
+And I will not call a mystery solved
+merely because I have found a story
 that makes me feel certain.
 
 I will seek the traces.
@@ -493,10 +493,10 @@ I will question the powerful.
 
 I will listen to the forgotten.
 
-I will distinguish what is known  
+I will distinguish what is known
 from what I hope to be true.
 
-And when the old skin grows too small,  
+And when the old skin grows too small,
 I will shed it.
 
 Not to erase the past.
