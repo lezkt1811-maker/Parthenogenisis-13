@@ -40,8 +40,13 @@ def chapter_list():
         body = book_body(md_path)
         # The file opens with "CHAPTER <numeral>" and the title on the next line; the text follows.
         head = re.match(r"CHAPTER ([IVXLCDM]+)\n+(.+)\n+", body)
+        prologue = re.match(r"PROLOGUE\n+(.+)\n+", body)
         if head:
             title = f"Chapter {head.group(1)}: {head.group(2).strip().title()}"
+        elif prologue:
+            # The prologue has no number: "PROLOGUE" and its subtitle on the next line.
+            head = prologue
+            title = f"Prologue: {head.group(1).strip()}"
         else:
             # Some chapters open with the heading on one line: "Chapter XIII: Title".
             head = re.match(r"Chapter ([IVXLCDM]+): (.+)\n+", body)
