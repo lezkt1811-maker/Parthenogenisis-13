@@ -38,13 +38,14 @@ def chapter_list():
     for md_path in sorted(CHAPTERS.glob("*.md")):
         num = md_path.name[:2]
         body = book_body(md_path)
-        title = re.match(r"# (.+)", body).group(1).strip()
-        # The first heading is the chapter title; the body HTML starts after it.
-        content = body.split("\n", 1)[1]
+        # The file opens with "CHAPTER <numeral>" and the title on the next line; the text follows.
+        head = re.match(r"CHAPTER ([IVXLCDM]+)\n+(.+)\n+", body)
+        title = f"Chapter {head.group(1)}: {head.group(2).strip().title()}"
+        content = body[head.end():]
         chapters.append({
             "num": num,
             "title": title,
-            "html": markdown.markdown(content, extensions=["tables"]),
+            "html": markdown.markdown(content, extensions=["tables", "nl2br"]),
             "audio": f"audio/{num}.mp3",
             "has_audio": (AUDIO / f"{num}.mp3").exists(),
         })

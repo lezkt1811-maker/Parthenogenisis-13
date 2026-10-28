@@ -1,4 +1,6 @@
-# Chapter I: Before the First Father
+CHAPTER I
+
+BEFORE THE FIRST FATHER
 
 In the beginning, there was no beginning.
 

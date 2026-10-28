@@ -1,4 +1,6 @@
-# Chapter II: The Womb of the Unwritten
+CHAPTER II
+
+THE WOMB OF THE UNWRITTEN
 
 Before the Mother was called Mother, she was.
 

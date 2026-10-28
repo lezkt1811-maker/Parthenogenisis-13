@@ -1,4 +1,6 @@
-# Chapter III: The Egg Beneath the Waters
+CHAPTER III
+
+THE EGG BENEATH THE WATERS
 
 And the Mother dreamed of a life she had not yet named.
 

@@ -1,4 +1,6 @@
-# Chapter IV: The First Division
+CHAPTER IV
+
+THE FIRST DIVISION
 
 And the Mother discovered that difference was not the same as division.
 

@@ -1,4 +1,6 @@
-# Chapter V: The Serpent Remembers
+CHAPTER V
+
+THE SERPENT REMEMBERS
 
 The skin may be shed. The living truth travels on.
 
