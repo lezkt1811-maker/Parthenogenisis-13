@@ -29,8 +29,8 @@ SECTIONS = [
 ]
 
 # The title and subtitle shown on the site. Change them here.
-BOOK_TITLE = "Parthenogenisis 13"
-BOOK_SUBTITLE = "Chapters, read aloud"
+BOOK_TITLE = "The Book of Parthenogenesis"
+BOOK_SUBTITLE = "Part the He. No Gene. Isis."
 
 
 def book_body(path: Path) -> str:
